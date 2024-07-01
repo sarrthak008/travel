@@ -1,7 +1,7 @@
 
 const mongoose = require('mongoose')
 
-const userSchma = mongoose.Schema({
+const gallaryImageSchma = mongoose.Schema({
       travelImage:{
          type:String,
          required:true
@@ -13,4 +13,4 @@ const userSchma = mongoose.Schema({
       
 })
 
-module.exports = mongoose.model("user",userSchma);
+module.exports = mongoose.model("gallarySchma",gallaryImageSchma);

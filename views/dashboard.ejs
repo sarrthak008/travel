@@ -24,6 +24,15 @@
                    <a href="/dashboard">cancle</a>
              </form>
         </div>
+          <div id="over2">
+           
+               <form action="/gallary" method="post"  enctype="multipart/form-data">
+                    <input type="file" name="pictureUrl" id="" accept="image/*" >
+                    <input type="text" placeholder="enter place description" name="description">
+                    <button type="submit">add picture</button>
+               </form>
+        </div>
+
              <h1>YOU ARE NOW ADMIN</h1>
              <button class="open-btn">click to add routes<i class="ri-map-pin-add-fill"></i></button>
              <div id="routs-container">
@@ -50,7 +59,14 @@
           
               <% }%>
              </div>
+
+            <button class="open-btn2">click to add photos<i class="ri-map-pin-add-fill"></i></button>
+         
+          
      </div>
+
+      
+
 
      <script src="/javascript/dashboard.js"></script>
 </body>
