@@ -1,12 +1,15 @@
 const express = require('express')
 const app = express()
 require('dotenv').config()
+const cloudinary = require('cloudinary').v2
 const mongoose = require('./config/connectDB')
 const cookieParser = require('cookie-parser')
 const rout = require('./models/route')
 const path = require('path')
 const PORT = process.env.PORT || 3000
 const admin = require('./models/admin')
+const upload = require('./config/multer')
+const fs = require('fs')
 
 
 //middle ware thats require....
@@ -28,13 +31,58 @@ app.post("/dashboard",isLogind,(req,res)=>{
      res.render('dashboard')// thtas the magic...
 })
 
-app.get("/dashboard",(req,res)=>{
+app.get("/dashboard", async (req,res)=>{
     if(req.cookies.login){  // stored cokkie....
-      res.render('dashboard')
+    
+     let routs = await rout.find()
+     res.render('dashboard',{routs:routs})
     }else{
       res.redirect('/')
     }
+
 })
+
+
+
+ // Correct import
+
+    app.post('/upload', upload.single('localImageUrl'), async (req, res) => {
+        try {
+            let { placeName, date, description, cost, travelTime } = req.body;
+        
+            cloudinary.config({
+                cloud_name: process.env.CLOUD_NAME,
+                api_key: process.env.CLOUD_API_KEY,
+                api_secret: process.env.CLOUD_API_SECRECT
+            });
+    
+            const uploadResult = await cloudinary.uploader.upload(req.file.path, {
+                public_id: "hiiiii" // Example public_id, you might want to generate this dynamically
+            });
+    
+    // console.log(uploadResult); // Check upload result
+    
+        
+            const createRoute = await rout.create({
+                placeImage: uploadResult.secure_url, // Assuming secure_url is the image URL returned by Cloudinary
+                placeName: placeName,
+                date: date,
+                description: description,
+                cost: cost,
+                travelTime: travelTime
+         });
+            //console.log(createRoute);
+            res.redirect("/dashboard")
+
+           } catch (error) {
+            console.error(error);
+            res.status(500).json({ error: 'Upload failed' });
+          }
+
+    });
+    
+
+
 
 
 /// function that authenticate the admin....

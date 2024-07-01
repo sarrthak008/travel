@@ -19,9 +19,137 @@ body{
     height: 100vh;
     width: 100vw;
     background-color: #EEEBFE;
+    position: relative;
 }
 #main h1{
     text-align: center;
     font-weight: 600;
-    
+}
+
+#over{
+   height: 100%;
+   width: 100%;
+   background-color: rgba(165, 151, 168, 0.5);
+   position: absolute;
+   backdrop-filter: blur(5px);
+   top: 0;
+   left: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   display: none;
+   z-index: 11;
+}
+
+#over form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    width: 30vw;
+    background-color: rgb(253, 249, 249);
+    gap: 4vh;
+    justify-content: center;
+    border-radius: 14px;
+}
+
+#over form input{
+    height:4vh;
+    padding:1vh 1.5vw;
+    width: 20vw;
+    font-size: 1.2vw;
+    border: none;
+    outline: none;
+    background-color: rgba(206, 206, 244, 0.502);
+    font-weight: 600;
+}
+
+#over form button{
+    padding: 1vh 8vw;
+    background-color: rgb(30, 30, 245);
+    border: none;
+    color: whitesmoke;
+    font-size: 1.5vw;    
+    font-weight: 800;
+}
+
+#over form a{
+    color: red;
+    font-size: 1.3vw;
+}
+
+
+.open-btn{
+     background-color: #EEEBFE;
+     border: none;
+     color: blue;
+     font-weight: 800;
+     margin-left: 4vw;
+     font-size: 1.2vw;
+     text-decoration: underline;
+     cursor: pointer;
+}
+
+#routs-container{
+    height: 60vh;
+    width: 98%;
+    margin-top: 3vh;
+    padding: 2vh 1vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+#routs-container::-webkit-scrollbar{
+    display: none;
+}
+
+#routs-container h3{
+    margin-left: 3vw;
+    color: rgb(87, 86, 86);
+}
+
+
+.route{
+    height: 100%;
+    width:20vw;
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.61);
+    border-radius: 9px;
+    overflow: hidden;
+    display: inline-block;
+    margin-left:3vw ;
+    position: relative;
+}
+
+.img-div{
+    height: 40%;
+    width: 100%;
+}
+
+.img-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.route span{
+    font-size: 1.6vw;
+    font-weight: 900;
+}
+
+.route span h4{
+    margin-left: 1vw;
+    margin-top: 2vh;
+}
+
+.route a{
+    position: absolute;
+    top: -5px;
+    right: 0;
+    text-decoration: none;
+    color: red;
+    z-index: 1;
+    font-size: 3vw;
+
 }

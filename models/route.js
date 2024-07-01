@@ -6,11 +6,15 @@ const routeSchma = mongoose.Schema({
          type:String,
          required:true
        },
+        placeName:{
+          type:String,
+          required:true
+        },
        date:{
         type:String,
         require:true
        },
-       discription:{
+       description:{
         type:String,
         required:true
        },
@@ -18,10 +22,11 @@ const routeSchma = mongoose.Schema({
         type:Number,
         required:true
        },
-       trvelTime:{
+       travelTime:{
         type:String,
         required:true
        }
+       
 
 })
 

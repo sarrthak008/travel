@@ -3,13 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
     <link rel="stylesheet" href="/css/dashboard.css">
     <title>Document</title>
 </head>
 <body>
      <div id="main">
+        <div id="over">
+             <form action="/upload" method="post"  enctype="multipart/form-data">
+                   <input type="file" name="localImageUrl" id="" accept="image/*" >
+                   <input type="text" placeholder="enter place name" name="placeName">
+                   <input type="text" name="date" placeholder="enter date like 01/01/2001" >
+                   <input type="text" placeholder="enter short discription" name="description">
+                   <input type="number" name="cost" id="" placeholder="enter the cost">
+                   <input type="text" placeholder="enter the travel time like 4day/5night" name="travelTime">
+                   <button type="submit">add route</button>
+                   <a href="/dashboard">cancle</a>
+             </form>
+        </div>
              <h1>YOU ARE NOW ADMIN</h1>
-             
+             <button class="open-btn">click to add routes<i class="ri-map-pin-add-fill"></i></button>
+             <div id="routs-container">
+                <% if(routs==""){ %>
+                      <h3>Opps ! nothing here to show you add some thing...</h3>
+               <% }else{ %>
+                     
+                    <% routs.forEach((rout)=>{ %>
+                                               
+                         <div class="route">
+                              <div class="img-div">
+                                    <img src=<%= rout.placeImage %> alt="">
+                              </div>
+                              <span> 
+                                    <h4><i class="ri-arrow-right-up-line"></i><%= rout.placeName%></h4>
+                                    <h4><i class="ri-arrow-right-up-line"></i><%= rout.date%></h4>
+                                    <h4><i class="ri-arrow-right-up-line"></i><%= rout.travelTime%></h4>
+                                    <h4><i class="ri-arrow-right-up-line"></i><%= rout.cost%>Rs</h4>
+                              </span>
+                           <a href="#" class="delete"><i class="ri-close-circle-fill"></i></a>
+                         </div>
+
+                 <%   })%>
+          
+              <% }%>
+             </div>
      </div>
+
+     <script src="/javascript/dashboard.js"></script>
 </body>
 </html>
