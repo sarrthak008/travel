@@ -81,6 +81,16 @@ app.get("/dashboard", async (req,res)=>{
 
     });
     
+    app.get('/delete/:uid',async (req,res)=>{
+         let id = req.params.uid
+         let deletedRout = await rout.findOneAndDelete({_id:id})
+         console.log(deletedRout)
+         if(!deletedRout){
+            res.send("deleting error")
+         }else{
+            res.redirect("/dashboard")
+         }
+    })
 
 
 
