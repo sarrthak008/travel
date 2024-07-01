@@ -1,0 +1,86 @@
+@font-face {
+    font-family:gily-roy;
+    src: url(./fonts/Gilroy-Regular.ttf);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: gily-roy;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#img-div{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#img-div img{
+    height: 70%;
+    width: 50%;
+    object-fit: fill;
+}
+
+#form-div{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #EEEBFE;
+   justify-content: center;
+}
+
+#form-div h2{
+    font-weight:bolder;
+    font-size: 2vw;
+}
+
+
+#form-div form{
+    height: 50vh;
+    width: 30vw;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    padding: 0 3vw;
+    gap: 5vh;
+}
+
+#form-div form input{
+     height:5vh;
+     padding:1vh 2vw;
+     width: 20vw;
+     font-size: 1.2vw;
+     border: none;
+     outline: none;
+     background-color: rgba(206, 206, 244, 0.502);
+     font-weight: 600;
+}
+
+#form-div form button{
+    padding: 1vh 5vw;
+    background-color: rgb(30, 30, 245);
+    border: none;
+    color: whitesmoke;
+    font-size: 1.5vw;    
+    font-weight: 800;
+}
