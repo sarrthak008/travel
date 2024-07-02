@@ -16,7 +16,7 @@ body{
 }
 
 #main{
-    height: 100vh;
+    height: 140vh;
     width: 100vw;
     background-color: #EEEBFE;
     position: relative;
@@ -152,4 +152,121 @@ body{
     z-index: 1;
     font-size: 3vw;
 
+}
+
+#pic-container{
+     height: 40vh;
+     width: 100%;
+     padding: 1vh;
+     overflow-y: hidden;
+     overflow-x: scroll;
+     white-space: nowrap;
+}
+
+#pic-container::-webkit-scrollbar{
+    display: none;
+}
+
+.open-btn2{
+    margin-top: 7vh;
+    margin-bottom: 4vh;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.pic{
+      height: 100%;
+      overflow: hidden;
+      display: inline-block;
+      margin-left: 3vw;
+      width: 20vw;
+      border-radius: 9px;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 4px 4px 10px gray;
+      background-color: rgb(248, 242, 242);
+}
+
+.pic img{
+    height: 110%;
+    width: 110%;
+    object-fit: fill;
+    cursor: pointer;
+}
+
+.info{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    text-wrap: wrap;
+    background:linear-gradient(to top,black,rgba(0, 0, 0, 0.861),rgba(0, 0, 0, 0.555));
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1.3vw;
+    font-weight: 600;
+    transition: all .2s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pic:hover .info{
+    top:0;
+}
+
+.deletePic{
+    color: red;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-decoration: none;
+    font-size: 2vw;
+
+}
+
+
+#over2 form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    width: 30vw;
+    background-color: rgb(253, 249, 249);
+    gap: 4vh;
+    justify-content: center;
+    border-radius: 14px;
+}
+
+#over2 form input{
+    height:4vh;
+    padding:1vh 1.5vw;
+    width: 20vw;
+    font-size: 1.2vw;
+    border: none;
+    outline: none;
+    background-color: rgba(206, 206, 244, 0.502);
+    font-weight: 600;
+}
+
+#over2 form button{
+    padding: 1vh 8vw;
+    background-color: rgb(30, 30, 245);
+    border: none;
+    color: whitesmoke;
+    font-size: 1.5vw;    
+    font-weight: 800;
+}
+
+#over2  form a{
+    color: red;
+    font-size: 1.3vw;
 }

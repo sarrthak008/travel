@@ -8,7 +8,8 @@
     rel="stylesheet"
 />
     <link rel="stylesheet" href="/css/dashboard.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="/images/iconpng" type="image/x-icon">
+    <title>DASHBOARD |  DURAVA'S WORLD TRAVEL & EXPLORE</title>
 </head>
 <body>
      <div id="main">
@@ -30,6 +31,7 @@
                     <input type="file" name="pictureUrl" id="" accept="image/*" >
                     <input type="text" placeholder="enter place description" name="description">
                     <button type="submit">add picture</button>
+                    <a href="/dashboard">cancle</a>
                </form>
         </div>
 
@@ -61,8 +63,26 @@
              </div>
 
             <button class="open-btn2">click to add photos<i class="ri-map-pin-add-fill"></i></button>
-         
-          
+              <div id="pic-container">
+                     <% if(gallarypic== ""){ %>
+                         <h3>Opps ! nothing here to show you add some thing...</h3>
+                     <% }else{%>
+                         <% gallarypic.forEach((pics)=>{ %>
+                                      
+                                  
+                               <div class="pic">
+                                        <div class="img">
+                                           <img src="<%= pics.travelImage %>" alt="">
+                                        </div>
+                                   <div class="info"><%= pics.info %></div>
+                              <a href="/deletePic/<%= pics._id %>"class="deletePic"><i class="ri-close-circle-fill"></i></a>
+                              </div>
+                           
+                              <% } )%>
+
+                     <%}%>
+              </div>
+              
      </div>
 
       

@@ -12,6 +12,7 @@ const upload = require('./config/multer')
 const fs = require('fs')
 const GallaryImageSchma = require('./models/gallary')
 const mongoose = require('mongoose')
+const gallary = require('./models/gallary')
  
 mongoose.connect(process.env.MONGO_URI).then(()=>console.log('connect to db')).catch((err)=>{
     console.log(err)
@@ -41,7 +42,8 @@ app.get("/dashboard", async (req, res) => {
     if (req.cookies.login) {  // stored cokkie....
 
         let routs = await rout.find()
-        res.render('dashboard', { routs: routs })
+        let gallarypic = await GallaryImageSchma.find()
+        res.render('dashboard', { routs: routs,gallarypic:gallarypic})
     } else {
         res.redirect('/')
     }
@@ -90,7 +92,7 @@ app.post('/upload', upload.single('localImageUrl'), async (req, res) => {
 app.get('/delete/:uid', async (req, res) => {
     let id = req.params.uid
     let deletedRout = await rout.findOneAndDelete({ _id: id })
-    console.log(deletedRout)
+    //console.log(deletedRout)
     if (!deletedRout) {
         res.send("deleting error")
     } else {
@@ -128,9 +130,31 @@ app.post("/gallary", upload.single('pictureUrl'), async (req, res) => {
     }
 
 
-
-
 })
+
+
+
+app.get('/deletePic/:uid', async (req, res) => {
+    let id = req.params.uid
+    let deletedRout = await gallary.findOneAndDelete({ _id: id })
+    //console.log(deletedRout)
+    if (!deletedRout) {
+        res.send("deleting error")
+    } else {
+        res.redirect("/dashboard")
+    }
+})
+
+app.get('/api/routs',async (req,res)=>{
+     let routs = await rout.find()
+     res.send(routs)
+})
+
+app.get('/api/gallary',async (req,res)=>{
+    let gallarypic = await GallaryImageSchma.find()
+     res.send(gallarypic)
+})
+
 
 
 
