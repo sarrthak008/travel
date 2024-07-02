@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 require('dotenv').config()
 const cloudinary = require('cloudinary').v2
-const mongoose = require('./config/connectDB')
+//const mongoose = require('./config/connectDB')
 const cookieParser = require('cookie-parser')
 const rout = require('./models/route')
 const path = require('path')
@@ -11,7 +11,11 @@ const admin = require('./models/admin')
 const upload = require('./config/multer')
 const fs = require('fs')
 const GallaryImageSchma = require('./models/gallary')
-
+const mongoose = require('mongoose')
+ 
+mongoose.connect(process.env.MONGO_URI).then(()=>console.log('connect to db')).catch((err)=>{
+    console.log(err)
+ })
 
 //middle ware thats require....
 
@@ -23,8 +27,9 @@ app.use(express.static(path.join(__dirname, "static")))
 
 // routs.....
 
-app.get("/", (req, res) => {
-    res.render('login')
+app.get("/", async  (req, res) => {
+      
+      res.render('login')
 })
 
 
