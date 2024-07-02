@@ -270,3 +270,460 @@ body::-webkit-scrollbar{
     color: red;
     font-size: 1.3vw;
 }
+
+
+@media screen and (max-width:480px) {
+    
+     
+#main{
+    height: 140vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+#main h1{
+    font-size: 7vw;
+}
+
+#over,#over2{
+   height: 100%;
+   width: 100%;
+}
+
+#over form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    width: 80vw;
+    background-color: rgb(253, 249, 249);
+    gap: 4vh;
+    justify-content: center;
+    border-radius: 14px;
+}
+
+#over form input{
+    height:4vh;
+    padding:1vh 1.5vw;
+    width: 60vw;
+    font-size: 3.2vw;
+}
+
+#over form button{
+    padding: 2vh 20vw;
+    font-size: 3.8vw;    
+    font-weight: 800;
+}
+
+#over form a{
+    color: red;
+    font-size: 3.6vw;
+}
+
+
+.open-btn,.open-btn2{
+     margin-left: 4vw;
+     font-size: 4.2vw;
+     margin-top: 3vh;
+}
+
+#routs-container{
+    height: 40vh;
+    width: 98%;
+    margin-top: 3vh;
+    padding: 2vh 1vw;
+}
+
+
+
+#routs-container h3{
+    margin-left: 3vw;
+    text-wrap: wrap;
+}
+
+
+.route{
+    height: 100%;
+    width:60vw;
+}
+
+.img-div{
+    height: 40%;
+    width: 100%;
+}
+
+.img-div img{
+    object-fit: contain ;
+}
+
+.route span{
+    font-size: 4.6vw;
+    font-weight: 900;
+}
+
+.route span h4{
+    margin-left: 2vw;
+    margin-top: 2vh;
+}
+
+.route a{
+    position: absolute;
+    top: 3px;
+    right: 1vh;
+    font-size: 7vw;
+}
+
+#pic-container{
+    height: 30vh;
+    width: 100%;
+    padding: 1vh;
+}
+
+.pic{
+     height: 100%;
+     width: 60vw;
+}
+
+.pic img{
+   height: 110%;
+   width: 110%;
+   object-fit: fill;
+   cursor: pointer;
+}
+
+.info{
+   font-size: 3.3vw;
+}
+
+.pic:hover .info{
+   top:0;
+}
+
+.deletePic{
+   font-size: 7vw;
+}
+
+
+
+
+#over2 form{
+    height: 50vh;
+    width: 80vw;
+    gap: 4vh;
+}
+
+#over2 form input{
+    height:4vh;
+    padding:1vh 1.5vw;
+    width: 60vw;
+    font-size: 3.2vw;
+}
+
+#over2 form button{
+    padding: 1vh 8vw;
+    font-size: 3.5vw;
+}
+
+#over2  form a{
+    font-size: 3.3vw;
+}
+}
+
+@media screen and (min-width:481px) and (max-width:720px) {
+     
+           
+#main{
+    height: 140vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+#main h1{
+    font-size: 5.5vw;
+}
+
+#over,#over2{
+   height: 100%;
+   width: 100%;
+}
+
+#over form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 85vh;
+    width: 80vw;
+    justify-content: center;
+    border-radius: 14px;
+}
+
+#over form input{
+    height:4vh;
+    padding:1vh 1.9vw;
+    width: 55vw;
+    font-size: 3vw;
+}
+
+#over form button{
+    padding: 1.5vh 10vw;
+    font-size: 2.8vw;    
+    font-weight: 800;
+}
+
+#over form a{
+    color: red;
+    font-size: 3.6vw;
+}
+
+
+.open-btn,.open-btn2{
+     margin-left: 4vw;
+     font-size: 3.2vw;
+     margin-top: 3vh;
+}
+
+#routs-container{
+    height: 50vh;
+    width: 98%;
+    margin-top: 3vh;
+    padding: 2vh 1vw;
+}
+
+
+
+#routs-container h3{
+    margin-left: 3vw;
+    text-wrap: wrap;
+}
+
+
+.route{
+    height: 100%;
+    width:50vw;
+}
+
+.img-div{
+    height: 40%;
+    width: 100%;
+}
+
+.img-div img{
+    object-fit: contain ;
+}
+
+.route span{
+    font-size: 4vw;
+    font-weight: 900;
+}
+
+.route span h4{
+    margin-left: 2vw;
+    margin-top: 2vh;
+}
+
+.route a{
+    position: absolute;
+    top: 3px;
+    right: 1vh;
+    font-size: 6vw;
+}
+
+#pic-container{
+    height: 30vh;
+    width: 100%;
+    padding: 1vh;
+}
+
+.pic{
+     height: 100%;
+     width: 60vw;
+}
+
+.pic img{
+   height: 110%;
+   width: 110%;
+   object-fit: fill;
+   cursor: pointer;
+}
+
+.info{
+   font-size: 3.1vw;
+}
+
+
+
+.deletePic{
+   font-size: 6vw;
+}
+
+#over2 form{
+    height: 50vh;
+    width: 80vw;
+    gap: 4vh;
+}
+
+#over2 form input{
+    height:4vh;
+    padding:1vh 1.5vw;
+    width: 60vw;
+    font-size: 3.2vw;
+}
+
+#over2 form button{
+    padding: 1vh 8vw;
+    font-size: 3.5vw;
+}
+
+#over2  form a{
+    font-size: 3.3vw;
+}
+
+}
+
+@media screen and (min-width:721px) and (max-width:1030px) {
+      
+                 
+#main{
+    height: 140vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+#main h1{
+    font-size: 3.5vw;
+}
+
+#over,#over2{
+   height: 100%;
+   width: 100%;
+}
+
+#over form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 85vh;
+    width: 80vw;
+    justify-content: center;
+    border-radius: 14px;
+}
+
+#over form input{
+    height:4vh;
+    padding:1vh 1.9vw;
+    width: 55vw;
+    font-size: 3vw;
+}
+
+#over form button{
+    padding: 1.5vh 10vw;
+    font-size: 2.8vw;    
+    font-weight: 800;
+}
+
+#over form a{
+    color: red;
+    font-size: 3.6vw;
+}
+
+
+.open-btn,.open-btn2{
+     margin-left: 4vw;
+     font-size: 2.7vw;
+     margin-top: 3vh;
+}
+
+#routs-container{
+    height: 45vh;
+    width: 98%;
+    margin-top: 3vh;
+    padding: 2vh 1vw;
+}
+
+
+
+#routs-container h3{
+    margin-left: 3vw;
+    text-wrap: wrap;
+}
+
+
+.route{
+    height: 100%;
+    width:30vw;
+}
+
+.img-div{
+    height: 40%;
+    width: 100%;
+}
+
+.img-div img{
+    object-fit: contain;
+}
+
+.route span{
+    font-size: 2.6vw;
+    font-weight: 900;
+}
+
+.route span h4{
+    margin-left: 2vw;
+    margin-top: 2vh;
+}
+
+.route a{
+    position: absolute;
+    top: 3px;
+    right: 1vh;
+    font-size: 4vw;
+}
+
+#pic-container{
+    height: 30vh;
+    width: 100%;
+    padding: 1vh;
+}
+
+.pic{
+     height: 100%;
+     width: 30vw;
+}
+
+.pic img{
+   height: 110%;
+   width: 110%;
+   object-fit: fill;
+   cursor: pointer;
+}
+
+.info{
+   font-size: 2vw;
+}
+
+
+
+.deletePic{
+   font-size: 4vw;
+}
+
+#over2 form{
+    height: 50vh;
+    width: 80vw;
+    gap: 4vh;
+}
+
+#over2 form input{
+    height:4vh;
+    padding:1vh 1.5vw;
+    width: 50vw;
+    font-size: 2.5vw;
+}
+
+#over2 form button{
+    padding: 1vh 7vw;
+    font-size: 2.5vw;
+}
+
+#over2  form a{
+    font-size: 3.3vw;
+}   
+
+}
