@@ -13,6 +13,7 @@ const fs = require('fs')
 const GallaryImageSchma = require('./models/gallary')
 const mongoose = require('mongoose')
 const gallary = require('./models/gallary')
+const cors = require('cors')
  
 mongoose.connect(process.env.MONGO_URI).then(()=>console.log('connect to db')).catch((err)=>{
     console.log(err)
@@ -145,12 +146,12 @@ app.get('/deletePic/:uid', async (req, res) => {
     }
 })
 
-app.get('/api/routs',async (req,res)=>{
+app.get('/api/routs',cors(),async (req,res)=>{
      let routs = await rout.find()
      res.send(routs)
 })
 
-app.get('/api/gallary',async (req,res)=>{
+app.get('/api/gallary',cors(),async (req,res)=>{
     let gallarypic = await GallaryImageSchma.find()
      res.send(gallarypic)
 })
