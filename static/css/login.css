@@ -32,8 +32,22 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    background-color:rgba(255, 255, 255, 0.963);
+    color: #EEEBFE;
 }
 
+#img-div h1{
+    font-size: 4vw;
+    color:black;
+    color: #000000;
+}
+
+#img-div h3{
+    font-size: 2vw;
+    color:black;
+    color: #000000;
+}
 #img-div img{
     height: 70%;
     width: 50%;
@@ -96,6 +110,9 @@ button{
     cursor: pointer;
 }
 
+
+
+
 @media screen and (max-width:480px) {
       
       
@@ -146,7 +163,10 @@ button{
     #form-div form button{
         padding: 1.8vh 20vw;
         font-size: 3.8vw;
-    }     
+    }   
+    
+    
+
  
 }
 

@@ -66,7 +66,7 @@ app.post('/upload', upload.single('localImageUrl'), async (req, res) => {
         });
 
         const uploadResult = await cloudinary.uploader.upload(req.file.path, {
-            public_id: "hiiiii" // Example public_id, you might want to generate this dynamically
+            public_id: `${placeName}` // Example public_id, you might want to generate this dynamically
         });
 
         // console.log(uploadResult); // Check upload result
@@ -115,7 +115,7 @@ app.post("/gallary", upload.single('pictureUrl'), async (req, res) => {
         });
 
         const uploadResult = await cloudinary.uploader.upload(req.file.path, {
-            public_id: "hiiiii" // Example public_id, you might want to generate this dynamically
+            public_id: `${description}` // Example public_id, you might want to generate this dynamically
         });
 
         const GallyPicture = await GallaryImageSchma.create({

@@ -109,6 +109,10 @@ body{
     color: rgb(87, 86, 86);
 }
 
+#pic-container h3{
+    margin-left: 3vw;
+    color: rgb(87, 86, 86);
+}
 
 .route{
     height: 100%;
@@ -340,6 +344,11 @@ body::-webkit-scrollbar{
     text-wrap: wrap;
 }
 
+
+#pic-container h3{
+    margin-left: 3vw;
+    text-wrap: wrap;
+}
 
 .route{
     height: 100%;
