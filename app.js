@@ -29,9 +29,9 @@ app.use(express.static(path.join(__dirname, "static")))
 
 // routs.....
 
-app.get("/", async  (req, res) => {
-      
+app.get("/", async (req, res) => {
       res.render('login')
+      //console.log(newIdPass)
 })
 
 
