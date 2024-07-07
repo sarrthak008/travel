@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, "static")))
 
 // routs.....
 
-app.get("/", async (req, res) => {
+app.get("/", (req, res) => {
       res.render('login')
       //console.log(newIdPass)
 })
@@ -179,7 +179,6 @@ async function isLogind(req, res, next) {
         next(error); // Pass any errors to Express error handler
     }
 }
-
 
 
 
